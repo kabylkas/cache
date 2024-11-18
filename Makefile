@@ -1,6 +1,6 @@
 # Define the compiler and flags
 CXX := g++
-CXXFLAGS := -Wall -Wextra -O2 -std=c++11
+CXXFLAGS := -Wall -Wextra -std=c++11 -g
 
 # Define the target executable
 TARGET := main

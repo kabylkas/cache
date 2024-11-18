@@ -25,7 +25,7 @@ namespace cs231
 
         // Control constructors.
         Cache() = delete;
-        Cache(size_t total_size, size_t cache_line_size);
+        Cache(size_t total_size, size_t cache_line_size, uint8_t* memory_pointer);
 
     private:
         const size_t kAddressWidth = 32;
@@ -46,6 +46,6 @@ namespace cs231
         std::vector<CacheLine> data_;
 
         // Commnuication to memory.
-        std::shared_ptr<uint8_t> memory_pointer_;
+        uint8_t* memory_pointer_ = nullptr;
     };
 }
