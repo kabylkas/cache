@@ -138,7 +138,7 @@ namespace cs231
             CacheLine new_cache_line;
             for (size_t i = 0; i < cache_line_size_; i++)
             {
-                uint32_t byte_address = ((address >> num_index_bits_) << num_index_bits_) + i;
+                uint32_t byte_address = ((address >> num_offset_bits_) << num_offset_bits_) + i;
                 new_cache_line.push_back(memory_pointer_[byte_address]);
             }
 
